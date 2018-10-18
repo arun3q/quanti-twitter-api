@@ -31,9 +31,14 @@ def fetchData(twitter_handler):
     followers = response.data.get('followers_count',0)
     following = response.data.get('friends_count',0)
     k = {'twitterhandle':twitter_handler,'follower':followers, 'following': following}
-    handler, created = Handler.objects.get_or_create(**k)
-    handler.save() 
-    print("twitter_handler: ",twitter_handler,"saved in DB")
+    try:
+        handler, created = Handler.objects.get_or_create(**k)
+        print("created",created)
+        # handler.save() 
+        print("twitter_handler: ",twitter_handler,"saved in DB")
+    except Exception as ex:
+        print(ex)
+    
 
 
 

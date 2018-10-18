@@ -1,5 +1,5 @@
 from django.db import models
-
+from jsonfield import JSONField
 # Create your models here.
 
 class Handler(models.Model):
@@ -9,6 +9,7 @@ class Handler(models.Model):
     twitterhandle = models.CharField(max_length=100,primary_key=True)
     follower = models.IntegerField()
     following = models.IntegerField()
+    tweetcount = JSONField(default=None, blank=True,null=True)
     tweets = models.ForeignKey("Tweets",on_delete=models.CASCADE, default=None, blank=True,null=True)
    
     class Meta:

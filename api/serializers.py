@@ -20,3 +20,13 @@ class HandlerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Handler
         fields = ('twitterhandle', 'follower', 'following', 'tweets')
+        
+class DayWiseTweetSerializer(serializers.Serializer):
+    """DayWiseTweetSerializer to store number of tweets on each day."""
+   monday = serializers.IntegerField()
+   tuesday = serializers.IntegerField()
+   wednesday = serializers.IntegerField()
+   thrusday = serializers.IntegerField()
+   friday = serializers.IntegerField()
+   saturday = serializers.IntegerField()
+   sunday = serializers.IntegerField()
