@@ -23,10 +23,10 @@ class HandlerSerializer(serializers.ModelSerializer):
         
 class DayWiseTweetSerializer(serializers.Serializer):
     """DayWiseTweetSerializer to store number of tweets on each day."""
-   monday = serializers.IntegerField()
-   tuesday = serializers.IntegerField()
-   wednesday = serializers.IntegerField()
-   thrusday = serializers.IntegerField()
-   friday = serializers.IntegerField()
-   saturday = serializers.IntegerField()
-   sunday = serializers.IntegerField()
+    monday = serializers.IntegerField()
+    tuesday = serializers.IntegerField()
+    wednesday = serializers.IntegerField()
+    thrusday = serializers.IntegerField()
+    friday = serializers.IntegerField()
+    saturday = serializers.IntegerField()
+    sunday = serializers.IntegerField()

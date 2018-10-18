@@ -42,11 +42,14 @@ class Savetweetcount(APIView):
     
     def post(self, request, *args, **kwargs):
         input_data = DayWiseTweetSerializer(data=request.data)
-        
+        if input_data.is_valid():
+            print("VALIDEEEEEEEEEEEEEEEEEEEEEEEE")
+            # serializer.save()
+        return Response(input_data.data, status=status.HTTP_201_CREATED)
         """
         product.name = 'Name changed again'
         product.save(update_fields=['name'])
-        """"
+        """
 
 
 
