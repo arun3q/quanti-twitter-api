@@ -23,7 +23,10 @@ client = UserClient(CONSUMER_KEY,
                     ACCESS_TOKEN,
                     ACCESS_TOKEN_SECRET)
                     
-def fetchData(twitter_handler):                
+def fetchData(twitter_handler):   
+    """
+    Fetch the twitter data and save it into the database
+    """
     response = client.api.users.show.get(screen_name=twitter_handler)
     followers = response.data.get('followers_count',0)
     following = response.data.get('friends_count',0)
