@@ -25,7 +25,7 @@ SECRET_KEY = 'mf#$-o748%f02(o*-fxc+-=a95=qf2n-$3q)z-v44q93l4v9yw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['twitter-api-arun3q.c9users.io']
+ALLOWED_HOSTS = ['twitter-api-arun3q.c9users.io','.herokuapp.com']
 
 
 # Application definition
