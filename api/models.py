@@ -6,7 +6,7 @@ class Handler(models.Model):
     """
     Twitter Handler model : model for Twitter user
     """
-    twitterhandle = models.CharField(max_length=100)
+    twitterhandle = models.CharField(max_length=100,primary_key=True)
     follower = models.IntegerField()
     following = models.IntegerField()
     tweets = models.ForeignKey("Tweets",on_delete=models.CASCADE, default=None, blank=True,null=True)

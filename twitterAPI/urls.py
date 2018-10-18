@@ -16,12 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from api import urls as api_url
+from django.conf import settings
+from django.conf.urls.static import static
 
+from api import urls as api_url
 from api import views as api_views
+
+from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("twitter/", include(api_url)),
-    # path('twitter/', api_views.home, name="home"),
-]
+    path("twitter/", include(api_url), name='api-home'),
+    path("",lambda request: redirect('index')),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
