@@ -7,8 +7,9 @@ from ...models import Handler, Tweets
 
 from birdy.twitter import UserClient
 
-
-
+"""""
+Add own keys from twitter to access their apis
+"""
 client = UserClient(CONSUMER_KEY,
                     CONSUMER_SECRET,
                     ACCESS_TOKEN,
