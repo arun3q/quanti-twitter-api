@@ -7,15 +7,6 @@ from ...models import Handler, Tweets
 
 from birdy.twitter import UserClient
 
-CONSUMER_KEY = "cvIOqEVIgjHg7nWuXPCGntRrJ"
-
-CONSUMER_SECRET = "jNTTgF0Ee4QisCbyeegFhU2Gj7j7L1jR5CQYzLemnOCdBcy7XR"  # (API secret key)
-
-
-#   Access token & access token secret
-ACCESS_TOKEN = "252358912-Ec7Q9BDkNycm1AA8nWqHMRyABV8ejQSwMuQIuayt" # (Access token)
-
-ACCESS_TOKEN_SECRET = "bDZbaBmrtnJMQd5bgCAMXTAZoA5O66scTtxOO4vHhUJDK" #  (Access token secret)
 
 
 client = UserClient(CONSUMER_KEY,
